@@ -24,19 +24,29 @@ public void test1() {
         Assert.assertFalse(greenRadioBtn.isEnabled(), "verify green Radio button NOT enabled(disabled)");
 
         greenRadioBtn.click();
+
     }
 
         @Test
 
-        public void test2(){
+        public void test2() throws InterruptedException {
 
             WebDriver driver= WebDriverFactory.getDriver("chrome");
             driver.manage().window().maximize();
             driver.get("http://practice.cybertekschool.com/dynamic_controls");
 
-            WebElement inputBox= driver.findElement(By.cssSelector("#input-example>input"));
+            driver.findElement(By.xpath("//button[@onclick='swapInput()']")).click();
 
+            Thread.sleep(10000);
+
+            WebElement inputBox= driver.findElement(By.cssSelector("#input-example>input"));
             inputBox.sendKeys("some message");
+
+            WebElement eneb = driver.findElement(By.xpath("//input[@type='text']"));
+           Thread.sleep(5000);
+           System.out.println(eneb.getText());
+
+
 
         }
 

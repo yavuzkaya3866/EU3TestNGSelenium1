@@ -32,8 +32,6 @@ public class ImplicitWaitExample {
     public void test1() throws InterruptedException {
         driver.get("http://practice.cybertekschool.com/dynamic_loading/4");
 
-
-
        // Thread.sleep(20000);
         WebElement element= driver.findElement(By.cssSelector("#finish"));
 

@@ -21,7 +21,7 @@ public class DDFLoginTest extends TestBase {
 
     }
 
-    @Test(dataProvider = "userData")
+    @Test(dataProvider = "userData", invocationCount=10)
     public void test1(String username, String password, String firstName, String lastName){
         extentLogger=report.createTest("Test "+firstName+lastName);
 

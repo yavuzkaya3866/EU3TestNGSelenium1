@@ -12,6 +12,7 @@ public class SingletonTest {
         String s1= Singleton.getInstance();
         String s2= Singleton.getInstance();
 
+
         System.out.println("s1 = " + s1);
         System.out.println("s2 = " + s2);
     }

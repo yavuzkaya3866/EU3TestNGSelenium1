@@ -38,9 +38,12 @@ public class iframeTest {
         Thread.sleep(2000);
         driver.findElement(By.cssSelector("#tinymce")).sendKeys("MikeSmith");
 
+        Thread.sleep(3000);
         //goes back to first frame
         //goes back to first frame,
-        driver.switchTo().defaultContent();
+       // driver.switchTo().defaultContent();
+
+        Thread.sleep(5000);
 
         //2.Switching with INDEX
         driver.switchTo().frame(0);
@@ -50,18 +53,19 @@ public class iframeTest {
         Thread.sleep(2000);
         driver.findElement(By.cssSelector("#tinymce")).sendKeys("MikeSmith WITH INDEX");
 
-        // SECOND WAY TO SWITC PARENT
 
-        driver.switchTo().parentFrame();
-
-        //3. USING WEBELEMENT
-
-        WebElement iframeElement = driver.findElement(By.tagName("iframe"));
-
-        driver.switchTo().frame(iframeElement);
-
-        Thread.sleep(2000);
-        driver.findElement(By.cssSelector("#tinymce")).sendKeys("MikeSmith WITH WEBELEMENT");
+//        // SECOND WAY TO SWITC PARENT
+//
+//        driver.switchTo().parentFrame();
+//
+//        //3. USING WEBELEMENT
+//
+//        WebElement iframeElement = driver.findElement(By.tagName("iframe"));
+//
+//        driver.switchTo().frame(iframeElement);
+//
+//        Thread.sleep(2000);
+//        driver.findElement(By.cssSelector("#tinymce")).sendKeys("MikeSmith WITH WEBELEMENT");
 
     }
 

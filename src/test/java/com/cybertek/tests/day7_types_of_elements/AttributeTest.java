@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 public class AttributeTest {
 
     @Test
-    public void test1(){
+    public void test1() throws InterruptedException {
         WebDriver driver = WebDriverFactory.getDriver("chrome");
         driver.manage().window().maximize();
 
@@ -34,6 +34,9 @@ public class AttributeTest {
 
         System.out.println(blueRadioBtn.getAttribute("outerHTML"));
 
+        Thread.sleep(10000);
+
+
         driver.get("http://practice.cybertekschool.com/multiple_buttons");
 
         WebElement button2 = driver.findElement(By.name("button2"));
@@ -43,8 +46,10 @@ public class AttributeTest {
         Assert.assertTrue(outerHTML.contains("Button 2"));
 
         System.out.println("Inner HTML: "+button2.getAttribute("innerHTML"));
-
+        Thread.sleep(10000);
         driver.quit();
 
     }
+
+
 }

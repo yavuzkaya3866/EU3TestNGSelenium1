@@ -5,6 +5,7 @@
          <package name="com.cybertek.tests.day13_pom"></package>
          <package name="com.cybertek.tests.day14_extent_reports"></package>
          <package name="com.cybertek.tests.day15_review"></package>
+
      </packages>
         <classes>
             <class name="com.cybertek.tests.day12_properties_driver_tests.PropertiesTest"></class>

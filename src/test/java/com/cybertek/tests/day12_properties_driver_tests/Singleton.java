@@ -20,6 +20,7 @@ public class Singleton {
             System.out.println("it has value, just returning it");
         }
         return str;
-    }
+}
+
 
 }

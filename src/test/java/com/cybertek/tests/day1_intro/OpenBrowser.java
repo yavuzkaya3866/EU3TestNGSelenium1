@@ -26,5 +26,9 @@ public class OpenBrowser {
         driver.get("https://google.com");
 
 
+        System.out.println("hello");
+
+
+
     }
 }
